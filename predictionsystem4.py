@@ -5,7 +5,7 @@ import tensorflow as tf
 
 
 
-a = tf.keras.models.load_model("trained.sav")
+a = tf.keras.models.load_model("Train_Bean.sav")
 x_test_data = pd.read_csv("/Users/huynhnhat/Desktop/Machine learning practice/Andrew Ng ml learning/Multiclassification Bean Class/Dry_Bean_Dataset_Test.csv", usecols=["Area",
                                                         "Perimeter",
                                                         "MajorAxisLength",
