@@ -6,23 +6,7 @@ import tensorflow as tf
 
 
 a = tf.keras.models.load_model("trained.sav")
-x_test_data = pd.read_csv("/Users/huynhnhat/Desktop/Machine learning practice/Andrew Ng ml learning/Multiclassification Bean Class/Dry_Bean_Dataset_Test.csv", usecols=["Area",
-                                                        "Perimeter",
-                                                        "MajorAxisLength",
-                                                        "MinorAxisLength",
-                                                        "AspectRation", "Eccentricity",
-                                                        "ConvexArea",
-                                                        "EquivDiameter",
-                                                        "Extent",
-                                                        "Solidity",
-                                                        "roundness",
-                                                        "Compactness",
-                                                        "ShapeFactor1",
-                                                        "ShapeFactor2",
-                                                        "ShapeFactor3",
-                                                        "ShapeFactor4"])
-y_test_data = np.array(pd.read_csv("/Users/huynhnhat/Desktop/Machine learning practice/Andrew Ng ml learning/Multiclassification Bean Class/Dry_Bean_Dataset_Test.csv", usecols= ["Class"]))
-y_test_data = np.select([y_test_data == "SEKER", y_test_data == "BARBUNYA", y_test_data == "BOMBAY", y_test_data == "CALI"], [0, 1, 2, 3], y_test_data).astype(np.float32)
+
 
 def prediction_bean(input_data):
     to_numpy = np.asarray(input_data)
