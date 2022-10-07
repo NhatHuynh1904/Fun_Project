@@ -14,20 +14,34 @@ def prediction_bean(input_data):
     prediction = a.predict(reshape_data)
     final = np.argmax(prediction)
     if final == 0:
-        return "Work!"
+        return "Seker"
+    elif final == 1:
+        return "Barbunya"
+    elif final == 2:
+        return "Bombay"
+    elif final == 3:
+        return "Cali"
+    elif final == 4:
+        return "Dermosan"
+    elif final == 5:
+        return "Horoz"
+    elif final == 6: 
+        return "Sira"
+
+  
 
 
 def main():
     st.title("Bean prediction Web App")
 
     #Get input data:
-    Area = st.number_input("Area of bean?")
-    Perimeter = st.number_input("Perimeter?")
-    MajorAxisLength = st.number_input("Major Axis")
-    MinorAxisLength = st.number_input("Minor Axis")
-    AspectRation = st.number_input("AspectRation")
-    Eccentricity = st.number_input("Eccentricity")
-    ConvexArea = st.number_input(" ConvexArea")
+    Area = st.number_input("Area of bean? (20.000 - 300.000)")
+    Perimeter = st.number_input("Perimeter? 500-2000")
+    MajorAxisLength = st.number_input("Major Axis 200-500")
+    MinorAxisLength = st.number_input("Minor Axis 100-400")
+    AspectRation = st.number_input("AspectRation 1-3")
+    Eccentricity = st.number_input("Eccentricity 0.5 - 0.9")
+    ConvexArea = st.number_input("ConvexArea 20000 - 200000")
     EquivDiameter = st.number_input("EquivDiameter")
     Extent = st.number_input(" Extent")
     Solidity = st.number_input(" Solidity")
